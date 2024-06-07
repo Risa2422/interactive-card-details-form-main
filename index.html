@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <div class="card-front">
+          <!-- カード自体の画像を作成 -->
+          <img src="./images/bg-card-front.png" alt="" />
+        </div>
+        <div class="card-back">
+          <img src="./images/bg-card-back.png" alt="" />
+        </div>
+      </div>
+      <form action="#" method="post" class="card-form">
+        <div class="holder-name-form">
+          <label for="holder-name">CARDHOLDER NAME</label>
+          <input type="text" name="holdername" id="holder-name" />
+        </div>
+        <div class="card-number-from">
+          <label for="card-number">CARD NUMBER</label>
+          <input type="text" name="cardnumber" id="card-number" />
+        </div>
+        <div class="exp-date-form">
+          <label for="exp-date">Exp. Date (MM/YY) MM YY CVC</label>
+          <input type="text" name="month" id="exp-date" />
+          <input type="text" name="year" id="exp-date" />
+          <input type="text" name="cvc" id="exp-date" />
+        </div>
+        <div class="confirm">
+          <input type="submit" name="submit" id="exp-date-id" />
+        </div>
+      </form>
+    </main>
+
+    <!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane
+    Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
+    e.g. 123 Confirm -->
+
+    <!-- Completed state start -->
+
+    Thank you! We've added your card details Continue
+  </body>
+</html>
