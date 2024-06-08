@@ -1,0 +1,143 @@
+$color-white: hsl(0, 0%, 100%);
+$color-light-grayish-violet: hsl(270, 3%, 87%);
+$color-dark-grayish-violet: hsl(279, 6%, 55%);
+$color-very-dark-violet: hsl(278, 68%, 11%);
+
+$desktop: 767px;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  //   background-size: 80% 100%;
+
+  @media screen and (min-width: $desktop) {
+    height: 100vh;
+    flex-direction: row;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+    padding: 1.5rem 1rem;
+    background: url(./images/bg-main-mobile.png) no-repeat center center;
+    background-size: cover;
+
+    @media screen and (min-width: $desktop) {
+      background-image: url(./images/bg-main-desktop.png);
+      margin-bottom: 0;
+      flex: 0 0 33.33%;
+      justify-content: center;
+      align-items: end;
+      gap: 1.5rem;
+    }
+
+    .card-front {
+      margin-top: -68px;
+      margin-bottom: -70px;
+      width: 285px;
+      height: 155px;
+      padding: 1.2rem;
+      background: url(./images/bg-card-front.png) no-repeat center center;
+      background-size: 100% 100%;
+
+      @media screen and (min-width: $desktop) {
+        margin-top: 0;
+        margin-bottom: 0;
+        transform: translateX(35%);
+        order: 1;
+        width: 450px;
+        height: 245px;
+      }
+
+      &__wrapper {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 1fr auto auto;
+        grid-template-areas:
+          "logo logo"
+          "number number"
+          "cardname exp";
+        row-gap: 1rem;
+        color: white;
+
+        .card-logo {
+          grid-area: logo;
+
+          img {
+            width: 50px;
+          }
+        }
+
+        .card-number {
+          grid-area: number;
+          font-size: 1.3rem;
+        }
+
+        .card-name {
+          grid-area: cardname;
+          font-size: 0.7rem;
+          text-transform: uppercase;
+        }
+
+        .card-date {
+          grid-area: exp;
+          font-size: 0.7rem;
+          text-align: right;
+        }
+      }
+    }
+
+    .card-back {
+      align-self: end;
+      width: 285px;
+      height: 155px;
+      background: url(./images/bg-card-back.png) no-repeat center center;
+      background-size: 100% 100%;
+
+      @media screen and (min-width: $desktop) {
+        order: 2; // flexのみに使える
+        transform: translateX(50%); //マイナスじゃないとオーバーフロウできない
+        width: 450px;
+        height: 245px;
+      }
+
+      &__wrapper {
+        padding: 2rem;
+        padding-top: 1.85rem;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        height: 100%;
+        color: white;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  &__info {
+    padding: 1.5rem;
+
+    @media screen and (min-width: $desktop) {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    form {
+      max-width: 300px;
+      width: 100%;
+    }
+  }
+}

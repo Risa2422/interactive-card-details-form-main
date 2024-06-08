@@ -11,47 +11,88 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="stylesheet" href="./style.css" />
     <title>Frontend Mentor | Interactive card details form</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+    </style>
   </head>
   <body>
     <main class="container">
-      <div class="card">
+      <div class="container__card">
+        <div class="card-back">
+          <div class="card-back__wrapper">
+            <span class="card-cvc">000</span>
+          </div>
+        </div>
         <div class="card-front">
           <!-- カード自体の画像を作成 -->
-          <img src="./images/bg-card-front.png" alt="" />
-        </div>
-        <div class="card-back">
-          <img src="./images/bg-card-back.png" alt="" />
+          <div class="card-front__wrapper">
+            <div class="card-logo">
+              <img src="./images/card-logo.svg" alt="Card Logo" />
+            </div>
+            <span class="card-number">0000 0000 0000 0000</span>
+            <span class="card-name">Jane Appleseed</span>
+            <span class="card-date">00/00</span>
+          </div>
         </div>
       </div>
-      <form action="#" method="post" class="card-form">
-        <div class="holder-name-form">
-          <label for="holder-name">CARDHOLDER NAME</label>
-          <input type="text" name="holdername" id="holder-name" />
-        </div>
-        <div class="card-number-from">
-          <label for="card-number">CARD NUMBER</label>
-          <input type="text" name="cardnumber" id="card-number" />
-        </div>
-        <div class="exp-date-form">
-          <label for="exp-date">Exp. Date (MM/YY) MM YY CVC</label>
-          <input type="text" name="month" id="exp-date" />
-          <input type="text" name="year" id="exp-date" />
-          <input type="text" name="cvc" id="exp-date" />
-        </div>
-        <div class="confirm">
-          <input type="submit" name="submit" id="exp-date-id" />
-        </div>
-      </form>
+      <div class="container__info">
+        <form action="#" method="post" class="card-form">
+          <div class="holder-name-form">
+            <label for="holder-name">CARDHOLDER NAME</label>
+            <input type="text" name="holdername" id="holder-name" />
+          </div>
+          <div class="card-number-from">
+            <label for="card-number">CARD NUMBER</label>
+            <input type="text" name="cardnumber" id="card-number" />
+          </div>
+          <div class="exp-date-form">
+            <div class="input-wrapper">
+              <label for="exp-date-month">Exp. Date (MM/YY)</label>
+              <input
+                type="text"
+                name="month"
+                id="exp-date-month"
+                placeholder="MM"
+              />
+              <input
+                type="text"
+                name="year"
+                id="exp-date-year"
+                placeholder="YY"
+              />
+            </div>
+            <div class="input-wrapper">
+              <label for="input_cvc">CVC</label>
+              <input
+                type="text"
+                name="cvc"
+                id="input_cvc"
+                placeholder="e.g. 123"
+              />
+            </div>
+          </div>
+          <div class="confirm">
+            <input
+              type="submit"
+              name="submit"
+              id="exp-date-id"
+              value="Confirm"
+            />
+          </div>
+        </form>
+
+        <!-- Completed state start -->
+
+        <!-- <div class="success-message">
+          Thank you! We've added your card details Continue
+        </div> -->
+      </div>
     </main>
 
     <!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane
     Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
     e.g. 123 Confirm -->
-
-    <!-- Completed state start -->
-
-    Thank you! We've added your card details Continue
   </body>
 </html>
