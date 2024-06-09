@@ -119,14 +119,17 @@ body {
         justify-content: end;
         align-items: center;
         height: 100%;
-        color: white;
+        color: $color-white;
         font-size: 0.7rem;
       }
     }
   }
 
   &__info {
+    max-width: 400px;
+    width: 100%;
     padding: 1.5rem;
+    margin: 1rem auto;
 
     @media screen and (min-width: $desktop) {
       flex: 1;
@@ -136,8 +139,65 @@ body {
     }
 
     form {
-      max-width: 300px;
-      width: 100%;
+      input {
+        height: 40px;
+        padding: 15px;
+        border-radius: 5px;
+        border: solid 1px $color-light-grayish-violet;
+        font-size: 16px;
+
+        &::placeholder {
+          color: $color-light-grayish-violet;
+          font-family: "Space Grotesk", sans-serif;
+        }
+      }
+
+      label {
+        padding: 10px 0;
+        color: $color-very-dark-violet;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+
+      .form-input {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-wrap-expdate {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      .form-expdate {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+        .exp-date {
+          display: flex;
+          gap: 5px;
+
+          #exp-date-label {
+            width: 100%;
+          }
+        }
+      }
+
+      .confirm {
+        margin-top: 20px;
+        input {
+          display: inline-block;
+          width: 100%;
+          height: 50px;
+          padding: 5px;
+          letter-spacing: 1px;
+          background-color: $color-very-dark-violet;
+          color: $color-light-grayish-violet;
+        }
+      }
     }
   }
 }

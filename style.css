@@ -105,11 +105,14 @@ body {
   justify-content: end;
   align-items: center;
   height: 100%;
-  color: white;
+  color: hsl(0, 0%, 100%);
   font-size: 0.7rem;
 }
 .container__info {
+  max-width: 400px;
+  width: 100%;
   padding: 1.5rem;
+  margin: 1rem auto;
 }
 @media screen and (min-width: 767px) {
   .container__info {
@@ -119,9 +122,56 @@ body {
     justify-content: center;
   }
 }
-.container__info form {
-  max-width: 300px;
+.container__info form input {
+  height: 40px;
+  padding: 15px;
+  border-radius: 5px;
+  border: solid 1px hsl(270, 3%, 87%);
+  font-size: 16px;
+}
+.container__info form input::placeholder {
+  color: hsl(270, 3%, 87%);
+  font-family: "Space Grotesk", sans-serif;
+}
+.container__info form label {
+  padding: 10px 0;
+  color: hsl(278, 68%, 11%);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.container__info form .form-input {
+  display: flex;
+  flex-direction: column;
+}
+.container__info form .form-wrap-expdate {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.container__info form .form-expdate {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.container__info form .form-expdate .exp-date {
+  display: flex;
+  gap: 5px;
+}
+.container__info form .form-expdate .exp-date #exp-date-label {
   width: 100%;
+}
+.container__info form .confirm {
+  margin-top: 20px;
+}
+.container__info form .confirm input {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  letter-spacing: 1px;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(270, 3%, 87%);
 }
 
 /*# sourceMappingURL=style.css.map */
