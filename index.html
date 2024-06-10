@@ -37,7 +37,7 @@
         </div>
       </div>
       <div class="container__info">
-        <form action="#" method="post" class="card-form">
+        <form action="#" method="get" class="card-form">
           <div class="holder-name-form form-input">
             <label for="holder-name">CARDHOLDER NAME</label>
             <input
@@ -46,6 +46,7 @@
               id="holder-name"
               placeholder="e.g. Jane Appleseed"
             />
+            <div class="holder-name-line"></div>
           </div>
           <div class="card-number-from form-input">
             <label for="card-number">CARD NUMBER</label>
@@ -55,6 +56,7 @@
               id="card-number"
               placeholder="e.g. 1234 5678 9123 0000"
             />
+            <div class="card-number-line"></div>
           </div>
           <div class="form-wrap-expdate">
             <div class="input-wrapper form-expdate">
@@ -73,24 +75,28 @@
                   placeholder="YY"
                 />
               </div>
+              <div class="exp-date-line"></div>
             </div>
             <div class="input-wrapper form-input form-cvc">
               <label for="input_cvc">CVC</label>
               <input
                 type="text"
                 name="cvc"
-                id="input_cvc"
+                id="cvc-number"
                 placeholder="e.g. 123"
               />
+              <div class="cvc-line"></div>
             </div>
           </div>
           <div class="confirm">
-            <input
+            <!-- <input
               type="submit"
               name="submit"
-              id="exp-date-id"
+              id="confirm"
               value="Confirm"
-            />
+              false
+            /> -->
+            <button id="button" type="button">Confirm</button>
           </div>
         </form>
 
@@ -101,5 +107,6 @@
         </div> -->
       </div>
     </main>
+    <script src="./app.js"></script>
   </body>
 </html>
