@@ -49,7 +49,6 @@ body {
   .container__card .card-front {
     margin-top: 0;
     margin-bottom: 0;
-    transform: translateX(35%);
     order: 1;
     width: 450px;
     height: 245px;
@@ -93,7 +92,6 @@ body {
 @media screen and (min-width: 767px) {
   .container__card .card-back {
     order: 2;
-    transform: translateX(50%);
     width: 450px;
     height: 245px;
   }
@@ -132,6 +130,9 @@ body {
 .container__info form input::placeholder {
   color: hsl(270, 3%, 87%);
   font-family: "Space Grotesk", sans-serif;
+}
+.container__info form input:hover {
+  border: solid 1px hsl(278, 68%, 11%);
 }
 .container__info form label {
   padding: 10px 0;

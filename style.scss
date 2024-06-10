@@ -54,7 +54,7 @@ body {
       @media screen and (min-width: $desktop) {
         margin-top: 0;
         margin-bottom: 0;
-        transform: translateX(35%);
+        // transform: translateX(35%);
         order: 1;
         width: 450px;
         height: 245px;
@@ -107,7 +107,7 @@ body {
 
       @media screen and (min-width: $desktop) {
         order: 2; // flexのみに使える
-        transform: translateX(50%); //マイナスじゃないとオーバーフロウできない
+        // transform: translateX(50%); //マイナスじゃないとオーバーフロウできない
         width: 450px;
         height: 245px;
       }
@@ -149,6 +149,10 @@ body {
         &::placeholder {
           color: $color-light-grayish-violet;
           font-family: "Space Grotesk", sans-serif;
+        }
+
+        &:hover {
+          border: solid 1px $color-very-dark-violet;
         }
       }
 
