@@ -69,3 +69,19 @@ function showErrMessage(info, line) {
   line.classList.add("error-message");
   submitButton.disabled = true;
 }
+
+// function to add space at 4 chars
+
+cardNumber.addEventListener('input', () => {
+  let value = cardNumber.value.replace(/\s/g, ''); // Remove existing spaces
+  let formattedValue = '';
+
+  for (let i = 0; i < value.length; i++) {
+      if (i > 0 && i % 4 === 0) {
+          formattedValue += ' ';
+      }
+      formattedValue += value[i];
+  }
+  
+  cardNumber.value = formattedValue;
+});
