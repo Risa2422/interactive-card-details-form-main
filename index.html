@@ -37,11 +37,11 @@
         </div>
       </div>
       <div class="container__info">
-        <form action="#" method="get" class="card-form">
+        <form action="#" method="post" class="card-form">
           <div class="holder-name-form form-input">
             <label for="holder-name">CARDHOLDER NAME</label>
             <input
-              type="text"
+              type="number"
               name="holdername"
               id="holder-name"
               placeholder="e.g. Jane Appleseed"
@@ -63,16 +63,22 @@
               <label for="exp-date-label">Exp. Date (MM/YY)</label>
               <div class="exp-date">
                 <input
-                  type="text"
+                  type="number"
                   name="month"
                   id="exp-date-label"
+                  class="month"
                   placeholder="MM"
+                  min="1"
+                  max="12"
                 />
                 <input
-                  type="text"
+                  type="number"
                   name="year"
                   id="exp-date-label"
+                  class="year"
                   placeholder="YY"
+                  min="1"
+                  max="99"
                 />
               </div>
               <div class="exp-date-line"></div>
@@ -80,10 +86,11 @@
             <div class="input-wrapper form-input form-cvc">
               <label for="input_cvc">CVC</label>
               <input
-                type="text"
+                type="number"
                 name="cvc"
                 id="cvc-number"
                 placeholder="e.g. 123"
+                max="3"
               />
               <div class="cvc-line"></div>
             </div>
@@ -96,7 +103,7 @@
               value="Confirm"
               false
             /> -->
-            <button id="button" type="button">Confirm</button>
+            <button id="button" type="submit">Confirm</button>
           </div>
         </form>
 

@@ -2,6 +2,7 @@ $color-white: hsl(0, 0%, 100%);
 $color-light-grayish-violet: hsl(270, 3%, 87%);
 $color-dark-grayish-violet: hsl(279, 6%, 55%);
 $color-very-dark-violet: hsl(278, 68%, 11%);
+$color-red: hsl(0, 100%, 66%);
 
 $desktop: 767px;
 
@@ -9,6 +10,18 @@ $desktop: 767px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 body {
@@ -156,13 +169,13 @@ body {
         }
 
         &.error-form {
-          border: solid 1px red;
+          border: solid 1px $color-red;
         }
       }
 
       .error-message {
         padding-top: 3px;
-        color: red;
+        color: $color-red;
         font-size: 13px;
       }
 
