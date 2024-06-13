@@ -58,7 +58,7 @@ cardForm.addEventListener("submit", (e) => {
     // cvc
     showErrMessage(cvc, cvcLine);
     cvcLine.innerText = blankErrorMessage;
-  } else if (!numericNumber.test(cardNumber.value)) {
+  } else if (!numericNumber.test(cvc.value)) {
     showErrMessage(cvc, cvcLine);
     cvcLine.innerText = formatErrorMessage;
   }
@@ -70,7 +70,7 @@ function showErrMessage(info, line) {
   submitButton.disabled = true;
 }
 
-// function to add space at 4 chars
+// Real-time functions
 
 cardNumber.addEventListener('input', () => {
   let value = cardNumber.value.replace(/\s/g, ''); // Remove existing spaces
@@ -83,5 +83,22 @@ cardNumber.addEventListener('input', () => {
       formattedValue += value[i];
   }
   
+  document.querySelector('.card-number').innerText = formattedValue
   cardNumber.value = formattedValue;
 });
+
+holderName.addEventListener('input', () => {
+  document.querySelector('.card-name').innerText = holderName.value
+})
+
+month.addEventListener('input', () => {
+  document.querySelector('.card-month').innerText = month.value
+})
+
+year.addEventListener('input', () => {
+  document.querySelector('.card-year').innerText = year.value
+})
+
+cvc.addEventListener('input', () => {
+  document.querySelector('.card-cvc').innerText = cvc.value
+})
