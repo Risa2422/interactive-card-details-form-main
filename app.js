@@ -112,3 +112,36 @@ function reset() {
   expDateLine.innerText = "";
   cvcLine.innerText = "";
 }
+
+// Real-time functions
+
+cardNumber.addEventListener('input', () => {
+  let value = cardNumber.value.replace(/\s/g, ''); // Remove existing spaces
+  let formattedValue = '';
+
+  for (let i = 0; i < value.length; i++) {
+      if (i > 0 && i % 4 === 0) {
+          formattedValue += ' ';
+      }
+      formattedValue += value[i];
+  }
+  
+  document.querySelector('.card-number').innerText = formattedValue
+  cardNumber.value = formattedValue;
+});
+
+holderName.addEventListener('input', () => {
+  document.querySelector('.card-name').innerText = holderName.value
+})
+
+month.addEventListener('input', () => {
+  document.querySelector('.card-month').innerText = month.value
+})
+
+year.addEventListener('input', () => {
+  document.querySelector('.card-year').innerText = year.value
+})
+
+cvc.addEventListener('input', () => {
+  document.querySelector('.card-cvc').innerText = cvc.value
+})

@@ -31,7 +31,9 @@
             </div>
             <span class="card-number">0000 0000 0000 0000</span>
             <span class="card-name">Jane Appleseed</span>
-            <span class="card-date">00/00</span>
+            <div class="card-date">
+              <span class="card-month">00</span>/<span class="card-year">00</span>
+            </div>
           </div>
         </div>
       </div>
@@ -59,7 +61,7 @@
           </div>
           <div class="form-wrap-expdate">
             <div class="input-wrapper form-expdate">
-              <label for="exp-date-label">Exp. Date (MM/YY)</label>
+              <label for="exp-date-label">EXP. DATE (MM/YY)</label>
               <div class="exp-date">
                 <input
                   type="number"
@@ -89,7 +91,8 @@
                 name="cvc"
                 id="cvc-number"
                 placeholder="e.g. 123"
-                max="3"
+                min="001"
+                max="999"
               />
               <div class="cvc-line"></div>
             </div>
