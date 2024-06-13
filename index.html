@@ -25,7 +25,6 @@
           </div>
         </div>
         <div class="card-front">
-          <!-- カード自体の画像を作成 -->
           <div class="card-front__wrapper">
             <div class="card-logo">
               <img src="./images/card-logo.svg" alt="Card Logo" />
@@ -41,7 +40,7 @@
           <div class="holder-name-form form-input">
             <label for="holder-name">CARDHOLDER NAME</label>
             <input
-              type="number"
+              type="text"
               name="holdername"
               id="holder-name"
               placeholder="e.g. Jane Appleseed"
@@ -96,22 +95,21 @@
             </div>
           </div>
           <div class="confirm">
-            <!-- <input
-              type="submit"
-              name="submit"
-              id="confirm"
-              value="Confirm"
-              false
-            /> -->
             <button id="button" type="submit">Confirm</button>
           </div>
         </form>
 
         <!-- Completed state start -->
-
-        <!-- <div class="success-message">
-          Thank you! We've added your card details Continue
-        </div> -->
+      </div>
+      <div class="success-message display-hide">
+        <div class="complete-img">
+          <img src="./images/icon-complete.svg" alt="icon for complate" />
+        </div>
+        <h2>THANK YOU!</h2>
+        <p>We've added your card details</p>
+        <div class="confirm">
+          <button id="button" class="continue-button">Continue</button>
+        </div>
       </div>
     </main>
     <script src="./app.js"></script>
