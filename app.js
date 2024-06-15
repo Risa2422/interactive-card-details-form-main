@@ -74,6 +74,7 @@ cardForm.addEventListener("submit", (e) => {
     hasError = true;
   } else if (!numericNumber.test(cardNumber.value)) {
     showErrMessage(cvc, cvcLine);
+    console.log("hi");
     cvcLine.innerText = formatErrorMessage;
     hasError = true;
   }
@@ -114,34 +115,32 @@ function reset() {
 }
 
 // Real-time functions
-
-cardNumber.addEventListener('input', () => {
-  let value = cardNumber.value.replace(/\s/g, ''); // Remove existing spaces
-  let formattedValue = '';
+cardNumber.addEventListener("input", () => {
+  let value = cardNumber.value.replace(/\s/g, ""); // Remove existing spaces
+  let formattedValue = "";
 
   for (let i = 0; i < value.length; i++) {
-      if (i > 0 && i % 4 === 0) {
-          formattedValue += ' ';
-      }
-      formattedValue += value[i];
+    if (i > 0 && i % 4 === 0) {
+      formattedValue += " ";
+    }
+    formattedValue += value[i];
   }
-  
-  document.querySelector('.card-number').innerText = formattedValue
-  cardNumber.value = formattedValue;
+
+  document.querySelector(".card-number").innerText = formattedValue;
 });
 
-holderName.addEventListener('input', () => {
-  document.querySelector('.card-name').innerText = holderName.value
-})
+holderName.addEventListener("input", () => {
+  document.querySelector(".card-name").innerText = holderName.value;
+});
 
-month.addEventListener('input', () => {
-  document.querySelector('.card-month').innerText = month.value
-})
+month.addEventListener("input", () => {
+  document.querySelector(".card-month").innerText = month.value;
+});
 
-year.addEventListener('input', () => {
-  document.querySelector('.card-year').innerText = year.value
-})
+year.addEventListener("input", () => {
+  document.querySelector(".card-year").innerText = year.value;
+});
 
-cvc.addEventListener('input', () => {
-  document.querySelector('.card-cvc').innerText = cvc.value
-})
+cvc.addEventListener("input", () => {
+  document.querySelector(".card-cvc").innerText = cvc.value;
+});

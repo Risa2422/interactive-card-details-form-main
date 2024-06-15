@@ -80,7 +80,6 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  //   background-size: 80% 100%;
 
   @media screen and (min-width: $desktop) {
     height: 100vh;
@@ -101,7 +100,6 @@ body {
       margin-bottom: 0;
       flex: 0 0 33.33%;
       justify-content: center;
-      align-items: end;
       gap: 2.5rem;
       position: relative;
     }
@@ -170,7 +168,7 @@ body {
           text-transform: uppercase;
 
           @media screen and (min-width: $desktop) {
-            font-size: .8rem;
+            font-size: 0.8rem;
             letter-spacing: 3px;
           }
         }
@@ -181,7 +179,7 @@ body {
           text-align: right;
 
           @media screen and (min-width: $desktop) {
-            font-size: .8rem;
+            font-size: 0.8rem;
             letter-spacing: 4px;
           }
         }
@@ -196,10 +194,10 @@ body {
       background-size: 100% 100%;
 
       @media screen and (min-width: $desktop) {
-        order: 2; // flexのみに使える
+        order: 2;
         position: absolute;
         right: -235px;
-        transform: translateY(140px); //マイナスじゃないとオーバーフロウできない
+        transform: translateY(140px);
         width: 450px;
         height: 245px;
       }
@@ -214,7 +212,7 @@ body {
         font-size: 0.7rem;
 
         @media screen and (min-width: $desktop) {
-          font-size: .8rem;
+          font-size: 0.8rem;
           letter-spacing: 3px;
           padding: 1.7rem 3.6rem 2rem;
         }
